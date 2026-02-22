@@ -4,7 +4,7 @@ body {
   background-color: #f0f0f0;
 }
 
-.game-container{
+.game-container {
   max-width: 600px;
   background-color: white;
   margin: auto;
@@ -13,9 +13,14 @@ body {
   box-shadow: 0 0 15px black;
 }
 
-.color-grid{
-    display: grid;
-
+.color-grid {
+  display: grid;
 }
 
-
+.color-box {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+}

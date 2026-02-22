@@ -15,9 +15,12 @@ body {
 
 .color-grid {
   display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 20px 0;
 }
 
-.color-box {
+.Color-box {
   width: 60px;
   height: 60px;
   cursor: pointer;

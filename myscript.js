@@ -60,14 +60,14 @@ function handleClick(clickedColor) {
 }
 
 function startGame() {
-  score: 0;
-  time: 30;
+  score = 0;
+  time = 30;
   scoreDisplay.textContent = score;
   timeDisplay.textContent = time;
   createGrid();
   clearInterval(timer);
   timer = setInterval(() => {
-    timer--;
+    time--;
     timeDisplay.textContent = time;
     if (time === 0) {
       clearInterval(timer);

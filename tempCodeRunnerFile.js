@@ -1,0 +1,1 @@
+anotherObj.sayHi=obj.sayHi

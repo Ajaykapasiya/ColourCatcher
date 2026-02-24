@@ -96,23 +96,18 @@
 //   gc.style.color = "white";
 // }
 
-
-
-
-
 // const f3 = (username) => {console.log("I am F3,",username)}
 
 // f3("Hello")
 
-
 // (function(){
 //     console.log("I am f6");
-    
+
 // })()
 
 // function f4(){
 //     console.log(arguments);
-    
+
 // }
 
 // f4(10,12)
@@ -122,7 +117,7 @@
 //     age:23,
 //     sayHi:function(){
 //         console.log("I am "+this.name);
-        
+
 //     }
 // }
 // obj.sayHi()
@@ -133,3 +128,58 @@
 // anotherObj.sayHi=obj.sayHi
 // anotherObj.sayHi()
 // obj.sayHi()
+
+// function books(id,title,price){
+//     this.id = id
+//     this.title = title
+//     this.price = price
+//     console.log(this);
+
+// }
+
+// b1 = new books(123,'hello',2343)
+// console.log("The title of book is "+b1.title)
+// console.log("The id of book is "+b1.id)
+// console.log("The price of book is $"+b1.price);
+
+// const obj = {
+//   a: 20,
+//   f1: function () {
+//     console.log(this.a);
+//     setTimeout(function () {
+//       console.log(this);
+//     }, 2000);
+//   },
+//   f2: function () {
+//     console.log(this.a);
+//     setTimeout(() => {
+//       console.log(this);
+//     }, 2000);
+//   },
+// };
+
+// obj.f1();
+// obj.f2()
+
+
+
+// let numbers = [1, 2, 3, 4];
+
+// // let result = numbers.map(num => num * 2);
+
+// let result = numbers.map((e)=>e*2)
+
+// console.log(result);
+
+
+// let numbers = [1, 2, 3, 4, 5];
+
+// let result = numbers.filter((num) => num > 3);
+
+// console.log(result);
+
+
+// let s1 = "Hello"
+
+// s2 = s1.split('').join('')
+// console.log(s2);

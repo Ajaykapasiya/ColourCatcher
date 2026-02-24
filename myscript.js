@@ -161,8 +161,6 @@
 // obj.f1();
 // obj.f2()
 
-
-
 // let numbers = [1, 2, 3, 4];
 
 // // let result = numbers.map(num => num * 2);
@@ -171,19 +169,16 @@
 
 // console.log(result);
 
-
 // let numbers = [1, 2, 3, 4, 5];
 
 // let result = numbers.filter((num) => num > 3);
 
 // console.log(result);
 
-
 // let s1 = "Hello"
 
 // s2 = s1.split('').join('')
 // console.log(s2);
-
 
 // function f1(fun){
 //     console.log("I am in f1()");
@@ -192,9 +187,8 @@
 
 // f1(() => {
 //     console.log("Hello");
-    
-// })
 
+// })
 
 // setTimeout(() => {
 //     console.log("Task 1 done");
@@ -213,24 +207,69 @@
 
 //     }, 1000);
 
-// }, 1000); 
+// }, 1000);
 
+// let promise = new Promise((resolve, reject) => {
+//     let success = true;
 
-let promise = new Promise((resolve, reject) => {
-    let success = true;
+//     if (success) {
+//         resolve("Data received");
+//     } else {
+//         reject("Error occurred");
+//     }
+// });
 
-    if (success) {
-        resolve("Data received");
-    } else {
-        reject("Error occurred");
-    }
-});
+// promise
+//   .then(result => {
+//       console.log(result);   // Data received
+//   })
+//   .catch(error => {
+//       console.log(error);
+//   });
 
+function someApi1() {
+  let p1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      console.log("Promise 1");
 
-promise
-  .then(result => {
-      console.log(result);   // Data received
-  })
-  .catch(error => {
-      console.log(error);
+      let x = Math.round(Math.random() * 10 + 1);
+      if (x % 2 == 0) {
+        resolve(x);
+      } else {
+        reject(x);
+      }
+    }, 5000);
   });
+  return p1
+}
+
+function someApi2() {
+  let p2 = new Promise((resolve, reject) => {
+    let x = Math.round(Math.random() * 10 + 1);
+    if (x % 2 == 0) {
+      resolve(x);
+    } else {
+      reject(x);
+    }
+  });
+  return p2
+}
+
+someApi1()
+  
+   .then((result) => {
+      console.log("Promise Pass" + result);
+     return someApi2();
+    },
+    (error) => {
+      console.log("Promise Failed" + error);
+    },
+  )
+  .then(
+    (result) => {
+      console.log("Promise Pass" + result);
+    },
+    (error) => {
+      console.log("Promise Failed" + error);
+    },
+  );

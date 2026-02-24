@@ -183,3 +183,54 @@
 
 // s2 = s1.split('').join('')
 // console.log(s2);
+
+
+// function f1(fun){
+//     console.log("I am in f1()");
+//     fun()
+// }
+
+// f1(() => {
+//     console.log("Hello");
+    
+// })
+
+
+// setTimeout(() => {
+//     console.log("Task 1 done");
+
+//     setTimeout(() => {
+//         console.log("Task 2 done");
+
+//         setTimeout(() => {
+//             console.log("Task 3 done");
+
+//             setTimeout(() => {
+//                 console.log("Task 4 done");
+//             }, 1000);
+
+//         }, 1000);
+
+//     }, 1000);
+
+// }, 1000); 
+
+
+let promise = new Promise((resolve, reject) => {
+    let success = true;
+
+    if (success) {
+        resolve("Data received");
+    } else {
+        reject("Error occurred");
+    }
+});
+
+
+promise
+  .then(result => {
+      console.log(result);   // Data received
+  })
+  .catch(error => {
+      console.log(error);
+  });

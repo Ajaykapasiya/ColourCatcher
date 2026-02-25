@@ -227,49 +227,53 @@
 //       console.log(error);
 //   });
 
-function someApi1() {
-  let p1 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log("Promise 1");
+// function someApi1() {
+//   let p1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("Promise 1");
 
-      let x = Math.round(Math.random() * 10 + 1);
-      if (x % 2 == 0) {
-        resolve(x);
-      } else {
-        reject(x);
-      }
-    }, 5000);
-  });
-  return p1
-}
+//       let x = Math.round(Math.random() * 10 + 1);
+//       if (x % 2 == 0) {
+//         resolve(x);
+//       } else {
+//         reject(x);
+//       }
+//     }, 5000);
+//   });
+//   return p1
+// }
 
-function someApi2() {
-  let p2 = new Promise((resolve, reject) => {
-    let x = Math.round(Math.random() * 10 + 1);
-    if (x % 2 == 0) {
-      resolve(x);
-    } else {
-      reject(x);
-    }
-  });
-  return p2
-}
+// function someApi2() {
+//   let p2 = new Promise((resolve, reject) => {
+//     let x = Math.round(Math.random() * 10 + 1);
+//     if (x % 2 == 0) {
+//       resolve(x);
+//     } else {
+//       reject(x);
+//     }
+//   });
+//   return p2
+// }
 
-someApi1()
+// someApi1()
   
-   .then((result) => {
-      console.log("Promise Pass" + result);
-     return someApi2();
-    },
-    (error) => {
-      console.log("Promise Failed" + error);
-    },
-  )
-  .then(
-    (result) => {
-      console.log("Promise Pass" + result);
-    },
-    (error) => {
-      console.log("Promise Failed" + error);
-    },
-  );
+//    .then((result) => {
+//       console.log("Promise Pass" + result);
+//      return someApi2();
+//     },
+//     (error) => {
+//       console.log("Promise Failed" + error);
+//     },
+//   )
+//   .then(
+//     (result) => {
+//       console.log("Promise Pass" + result);
+//     },
+//     (error) => {
+//       console.log("Promise Failed" + error);
+//     },
+//   );
+
+
+
+
